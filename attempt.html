@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+
+<html>
+   
+
+<head style="margin:0px; padding:0px">
+    <meta charset="utf-8"></meta>
+    <title>南水局水庫安全資料庫平台</title>
+    <link rel='shortcut icon' href='./asset/southern.ico' type="./asset/southern." />
+    <link rel='stylesheet' type='text/css' href='./css/style.css' />
+</head>
+
+
+
+
+<body class="bck" style="overflow-x:hidden; overflow-y:hidden; background-image: url('./asset/FotoJet (59).jpg');background-repeat: no-repeat;background-size: 100% 130%;height:1050px;margin-top: 80px;">
+    <div id="banner" style="width: 3000px;">
+        <!--<a href="https://www.wrasb.gov.tw/">
+        <img src = "/asset/logo.ico" style = "vertical-align: middle;" width = "270">
+        </a>-->
+        <p style=' padding: 5px 5px 5px 30px'>
+            <a href='#'><img src='./asset/mainlogo.png' alt=' ' width='250px'></a>
+        </p>
+        <p style=' padding:10px 20px 5px 30px'>
+            <font color='white' size='5.5'>曾文水庫、阿公店水庫及牡丹水庫水工閘門機電保養紀錄資料庫</font>
+        </p>
+
+    </div>
+
+    <div id='header' class="topcorner" ; align='center'>
+        <!--    
+        <form name="login" action="ind_login.php" method="post">
+            <button class="btn" type="submit">Log in</button>
+        </form>
+    -->
+        <button class="btn" onclick="window.location.href='./ind_login.php'">Log in</button>
+    </div>
+
+
+    <div id='content' style='margin-top: 140px;padding-left: 180px;float:left;width:40;'>
+
+        <p style="color:white; font-size:25px;font-weight:bold;">
+            各水庫歷年檢測資料查詢：
+        </p>
+        <form action="database.php" method="GET" style="">
+            <div>
+                <!--Main list-->
+                <select class="shortselect" name="dam" id="dam-list" onchange="changedam(this.selectedIndex)" style="font-size:22px;"></select>&emsp;
+
+
+                <!--Child list-->
+                <select class="shortselect" name="dam&element" id="sector-list" onchange="changemonth(this.selectedIndex)" style="font-size:22px;"></select>&emsp;
+
+
+
+                <select class="shortselect" name="year" style="font-size:22px;">
+                    <option value = "#">欲查詢年份</option>
+                    <option value = "111">115</option>
+                    <option value = "111">114</option>
+                    <option value = "111">113</option>
+                    <option value = "111">112</option>
+                    <option value = "111">111</option>
+                    <option value = "110">110</option>
+                    <option value = "109">109</option>
+                    <option value = "108">108</option>
+                    <option value = "107">107</option>
+                    <option value = "106">106</option>
+                    <option value = "105">105</option>
+                    <option value = "104">104</option>
+                    <option value = "103">103</option>
+                    <option value = "102">102</option>
+                </select> &emsp;
+                <select class="shortselect" name="month" style="font-size:22px;">
+                    <option value = "#">欲查詢月份</option>
+                    <option value = "01">一月</option>
+                    <option value = "02">二月</option>
+                    <option value = "03">三月</option>
+                    <option value = "04">四月</option>
+                    <option value = "05">五月</option>
+                    <option value = "06">六月</option>
+                    <option value = "07">七月</option>
+                    <option value = "08">八月</option>
+                    <option value = "09">九月</option>
+                    <option value = "10">十月</option>
+                    <option value = "11">十一月</option>
+                    <option value = "12">十二月</option>
+                </select> &emsp;
+                <div>
+                    <p style="color:red; font-size:15px;font-weight:bold;"># 若出現錯誤訊息請重新整理兩次！</p>
+                    <p style="color: white;padding-left: 518px;font-weight:bold;font-size: 25px;">>>> &emsp;<input class="shortselect2" type="submit" name="submit" value="查詢" style="font-size:22px;display: inline;"></p>
+
+                </div>
+
+            </div>
+        </form>
+        
+
+    </div>
+
+    <div id='text ' style='float:right;width:40%;padding-top:125px;padding-right: 150px;'>
+
+        <p align='center ' style='color: black;background-color: #ffffff6e;padding-right: 30px; padding-left: 25px;font-family: DFKai-sb;font-size: 17.9px;'><br>水工機械可靠度分析計畫概述<br> <br>為確保水庫安全與穩定的供水，水工閘門是否可以正常排洪與取水，為關鍵的因素之一，而水工閘門機電控制設備在其中扮演著重要的角色。南水局所轄管的曾文、牡丹及阿公店水庫營運操作均已超過數十年，所屬機電設備極可能因為劣化與磨耗導致無法正常運作，定期檢查、維護保養、與相關的檢測作業可以保持機電設備的可運作狀態。除了上述例行性的作業外，為具體了解目前水工閘門機電系統的安全狀態以及是否有提升水工閘門機電系統效能的可能性，進一步的分析如可靠度分析有其必要性。然而，國內水工閘門機電系統可靠度相關的分析較少，本團隊將基於水利署所辦理的「水庫水工閘門機電設備可靠度及維護策略研究」計畫(109)為基礎，針對曾文、阿公店及牡丹水庫提出適合之可靠度分析方法，分析的結果可作為水工閘門機電壽命評估的依據；分析的過程，亦會將元件置換或失效後之恢復設備正常或最低限度功能所需的時間納入考慮。因此，所建立的可靠度分析，不同的故障排除或搶修策略將包含在內，可作為失效後緊急處置作業之參考依據。
+            <br><br>
+        </p>
+
+    </div>
+
+
+
+
+    <!--
+    <div id='photo-rotate ' class='coverflow ' style="text-align:center">
+        <a href='# '><img src='./asset/曾文水庫.jpg ' alt=' '></a>
+        <a href='# '><img src='./asset/牡丹水庫.jpg ' alt=' '></a>
+        <a href='# '><img src='./asset/阿公店水庫.jpg ' alt=' '></a>
+    </div>
+    <div id='footer ' align='center '>
+        <font color='white '>Here is the footer!</div>
+        
+        style="background-image: url('./asset/black.jpg'); height:50px;float: left;margin-top: 400px;background-size: 120% 120%;"
+        -->
+
+
+
+</body>
+
+
+</html>
+
+<script type="text/javascript">
+    var colleges = ['欲查詢水庫', '牡丹水庫', '曾文水庫', '阿公店水庫'];
+    var dam_value = ['<option value = "#">', '<option value = "mudan">', '<option value = "zhenwen">', '<option value = "agon">'];
+      
+
+    var collegeSelect = document.getElementById("dam-list");
+    var inner = "";
+    for (var i = 0; i < colleges.length; i++) {
+        inner = inner + dam_value[i] + colleges[i] + '</option>';
+    }
+
+    collegeSelect.innerHTML = inner;
+
+    var key = new Array();
+    var element_value = new Array();
+
+    key[0] = ['欲查詢水庫系統'];
+    key[1] = ['第一溢洪道', '第二溢洪道', '第三溢洪道'];
+    key[2] = ['第一溢洪道', '第二溢洪道', '第三溢洪道','控制閘門','緊急防護閘門'];
+    key[3] = ['控制&防護閘門'];
+
+    element_value[0] = ['<option value = "#">'];
+    element_value[1] = ['<option value = "mudanspillway1">', '<option value = "mudanspillway2">', '<option value = "mudanspillway3">'];
+    element_value[2] = ['<option value = "zhenwenspillway1">', '<option value = "zhenwenspillway2">', '<option value = "zhenwenspillway3">', '<option value = "zhenwencontroldoor">', '<option value = "zhenwenmaintaindoor">'];
+    element_value[3] = ['<option value = "agonfloodingpipe">'];
+
+    function changedam(index) {
+        var Sinner = "";
+        for (var i = 0; i < key[index].length; i++) {
+            Sinner = Sinner + element_value[index][i] + key[index][i] + '</option>';;
+        }
+        var sectorSelect = document.getElementById("sector-list");
+        sectorSelect.innerHTML = Sinner;
+    }
+
+    changedam(document.getElementById("dam-list").selectedIndex);
+
+    //-------------------------------------------------------
+    year[0] = ['欲查詢年分'];
+    year[1] = ['106','107','108','109','110'];
+    year[2] = ['107','108','109','110'];
+    year[3] = ['106','107','108','109'];
+    year[4] = ['103','104','105','106','107','108','109','110'];
+    year[5] = ['103','104','105','106','107','108','109','110'];
+    year[6] = ['103','104','105','106','107','108','109','110'];
+    year[7] = ['105','106','107','108','109','110'];
+    year[8] = ['105','106','107','108','109','110'];
+    year[9] = ['106','107','108','110'];
+
+    month_value[0] = ['<option value = "#">'];
+
+    month_value[1] = ['<option value = "106">', '<option value = "107">', '<option value = "108">', '<option value = "109">', '<option value = "110">'];
+    month_value[2] = ['<option value = "#">'];
+    month_value[3] = ['<option value = "#">'];
+    
+    month_value[4] = ['<option value = "#">'];
+    month_value[5] = ['<option value = "#">'];
+    month_value[6] = ['<option value = "#">'];
+    month_value[7] = ['<option value = "#">'];
+    month_value[8] = ['<option value = "#">'];
+
+    month_value[9] = ['<option value = "#">'];
+
+    function changemonth(index,index2) {
+        var Smonth = "";
+        var $choose;
+        if(index == 1 && index2 == 1){$choose = 1}
+
+        for (var i = 0; i < year[$choose].length; i++) {
+            Smonth = Smonth + month_value[$choose][i] + year[$choose][i] + '</option>';;
+        }
+        var sectorSelect2 = document.getElementById("third-list");
+        sectorSelect2.innerHTML = Smonth;
+    }
+
+    changemonth(document.getElementById("dam-list").selectedIndex, document.getElementById("sector-list").selectedIndex);
+
+</script>
