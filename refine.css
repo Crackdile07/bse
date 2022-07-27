@@ -29,7 +29,7 @@ body {
     top: 180px;
     width: 3000px;
     height: 80px;
-    background-color:antiquewhite;
+    background-color:#DCD8B5;
 }
 
     #nav ul {
@@ -37,7 +37,7 @@ body {
         height: 50px;
         padding: 0px;
         margin: 0px;
-        background-color: antiquewhite;
+        background-color: #DCD8B5;
         position: sticky;
     }
 
@@ -140,4 +140,17 @@ body {
 }
 .menu:hover::after{
     width: 100%;
+}
+
+.goback{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    padding: 10px 10px 10px 20px;
+    background-color: #f5e8e7;
+    opacity: 0.5;
+    font-size: larger;
+    color: #111;
+    border-radius: 30;
+
 }
